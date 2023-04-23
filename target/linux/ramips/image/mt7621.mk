@@ -2316,6 +2316,24 @@ define Device/xiaomi_mi-router-cr660x
   DEVICE_PACKAGES += kmod-mt7915e uboot-envtools
 endef
 
+define Device/tb_wr1819m
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  DEVICE_VENDOR := TB
+  DEVICE_MODEL := WR1819M
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  KERNEL_SIZE := 4096k
+  UBINIZE_OPTS := -E 5
+  IMAGE_SIZE := 32768k
+  IMAGES += firmware.bin
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+  IMAGE/firmware.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
+	check-size
+  DEVICE_PACKAGES += kmod-mt7915e uboot-envtools
+endef
+TARGET_DEVICES += tb_wr1819m
+
 define Device/xiaomi_mi-router-cr6606
   $(Device/xiaomi_mi-router-cr660x)
   DEVICE_MODEL := Mi Router CR6606

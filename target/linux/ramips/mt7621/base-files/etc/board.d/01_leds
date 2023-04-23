@@ -40,6 +40,14 @@ cudy,wr2100)
 	ucidef_set_led_netdev "lan4" "lan4" "green:lan4" "lan4"
 	ucidef_set_led_netdev "wan" "wan" "green:wan" "wan"
 	;;
+tb,wr1819m)
+	ucidef_set_led_netdev "lan1" "lan1" "green:lan1" "lan1"
+	ucidef_set_led_netdev "lan2" "lan2" "green:lan2" "lan2"
+	ucidef_set_led_netdev "lan3" "lan3" "green:lan3" "lan3"
+	ucidef_set_led_netdev "wan" "wan" "green:wan" "wan"
+	ucidef_set_led_netdev "wifi2g" "WiFi 2.4GHz" "green:wifi2G" "wlan0"
+	ucidef_set_led_netdev "wifi5g" "WiFi 5GHz" "green:wifi5G" "wlan1"
+	;;
 d-team,newifi-d2)
 	ucidef_set_led_netdev "internet" "internet" "amber:internet" "wan"
 	ucidef_set_led_netdev "wlan2g" "WiFi 2.4GHz" "blue:wlan2g" "wlan0"

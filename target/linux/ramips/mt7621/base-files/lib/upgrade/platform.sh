@@ -101,6 +101,7 @@ platform_do_upgrade() {
 	sercomm,na502|\
 	sercomm,na502s|\
 	sim,simax1800t|\
+	tb,wr1819m|\
 	xiaomi,mi-router-3g|\
 	xiaomi,mi-router-3-pro|\
 	xiaomi,mi-router-4|\

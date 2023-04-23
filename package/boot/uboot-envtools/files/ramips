@@ -59,6 +59,9 @@ linksys,e7350|\
 netgear,wax202)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x20000" "0x20000"
 	;;
+tb,wr1819m)
+	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x20000" "0x80000"
+	;;
 haier,har-20s2u1|\
 sim,simax1800t)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x20000" "0x20000"
